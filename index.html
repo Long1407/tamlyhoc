@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind & Life</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #6b5b95;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #6b5b95;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, #f7e1d7, #d5c7e8, #f7e1d7);
+            padding: 60px 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(90deg, #d5c7e8, #f7e1d7);
+            padding: 40px;
+            text-align: center;
+            margin: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .newsletter h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #6b5b95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #5a4b7a;
+        }
+
+        /* Articles Section */
+        .articles {
+            padding: 40px;
+        }
+
+        .articles h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #6b5b95;
+        }
+
+        .article-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .article-card {
+            background-color: #d5c7e8;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 40px;
+            display: none;
+        }
+
+        .category-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: #d5c7e8;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Article Editor Section */
+        .article-editor {
+            padding: 40px;
+            display: none;
+        }
+
+        .article-editor h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #6b5b95;
+        }
+
+        .article-editor textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .article-editor button {
+            padding: 10px 20px;
+            background-color: #6b5b95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .article-editor button:hover {
+            background-color: #5a4b7a;
+        }
+
+        /* Article Content Section */
+        .article-content {
+            padding: 40px;
+            display: none;
+        }
+
+        .article-content h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #6b5b95;
+        }
+
+        .article-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #6b5b95;
+            color: white;
+            padding: 40px;
+            text-align: left;
+        }
+
+        footer h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons div {
+            width: 40px;
+            height: 40px;
+            background-color: #8a7db5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">M&L</div>
+        <nav>
+            <a onclick="showHome()">Home</a>
+            <a onclick="showArticles()">Articles</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Mind & Life</h1>
+        <p>Exploring Psychology and Life's Many Aspects</p>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest articles, research, and insights on psychology and life aspects.</p>
+        <form>
+            <input type="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section class="articles">
+        <h2>Featured Articles</h2>
+        <div class="article-grid">
+            <div class="article-card">Understanding Cognitive Biases</div>
+            <div class="article-card">The Psychology of Habit</div>
+            <div class="article-card">Emotional Intelligence in the...</div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Article Categories</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="showArticleContent('Psychology in Diplomacy')">Psychology in Diplomacy</div>
+            <div class="category-card" onclick="showArticleContent('Psychology in Economics')">Psychology in Economics</div>
+            <div class="category-card" onclick="showArticleContent('Psychology in Multimedia and Communications')">Psychology in Multimedia and Communications</div>
+            <div class="category-card" onclick="showArticleContent('Philosophy in Daily Life')">Philosophy in Daily Life</div>
+        </div>
+    </section>
+
+    <!-- Article Editor Section -->
+    <section class="article-editor">
+        <h2 id="editor-title">Edit Article</h2>
+        <textarea id="article-text" placeholder="Write your article here..."></textarea>
+        <button onclick="saveArticle()">Save Article</button>
+    </section>
+
+    <!-- Article Content Section -->
+    <section class="article-content">
+        <h2 id="content-title"></h2>
+        <p id="content-text"></p>
+        <button onclick="editArticle()">Edit Article</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Mind & Life</h2>
+        <p>Exploring Psychology and Life's Many Aspects</p>
+        <div class="social-icons">
+            <div>📷</div>
+            <div>🐦</div>
+        </div>
+    </footer>
+
+    <script>
+        let currentCategory = '';
+
+        // Show Home Page
+        function showHome() {
+            document.querySelector('.hero').style.display = 'block';
+            document.querySelector('.newsletter').style.display = 'block';
+            document.querySelector('.articles').style.display = 'block';
+            document.querySelector('.categories').style.display = 'none';
+            document.querySelector('.article-editor').style.display = 'none';
+            document.querySelector('.article-content').style.display = 'none';
+        }
+
+        // Show Articles Categories
+        function showArticles() {
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelector('.newsletter').style.display = 'none';
+            document.querySelector('.articles').style.display = 'none';
+            document.querySelector('.categories').style.display = 'block';
+            document.querySelector('.article-editor').style.display = 'none';
+            document.querySelector('.article-content').style.display = 'none';
+        }
+
+        // Show Article Content
+        function showArticleContent(category) {
+            currentCategory = category;
+            document.querySelector('.categories').style.display = 'none';
+            document.querySelector('.article-content').style.display = 'block';
+
+            const content = localStorage.getItem(category) || 'No content available yet. Click "Edit Article" to add content.';
+            document.querySelector('#content-title').textContent = category;
+            document.querySelector('#content-text').textContent = content;
+        }
+
+        // Show Article Editor
+        function editArticle() {
+            document.querySelector('.article-content').style.display = 'none';
+            document.querySelector('.article-editor').style.display = 'block';
+
+            document.querySelector('#editor-title').textContent = `Edit Article: ${currentCategory}`;
+            const content = localStorage.getItem(currentCategory) || '';
+            document.querySelector('#article-text').value = content;
+        }
+
+        // Save Article
+        function saveArticle() {
+            const content = document.querySelector('#article-text').value;
+            localStorage.setItem(currentCategory, content);
+            showArticleContent(currentCategory);
+        }
+
+        // Initialize
+        showHome();
+    </script>
+</body>
+</html>
